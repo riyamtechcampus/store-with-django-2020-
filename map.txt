@@ -1,0 +1,19 @@
+Product 
+
+name
+desc 
+
+category 
+brand 
+
+price 
+discount price
+cost 
+created at 
+
+
+
+img 
+category 
+alternative 
+accessories 
