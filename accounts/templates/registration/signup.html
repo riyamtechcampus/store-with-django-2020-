@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+
+<main>
+    <br>
+    <div class="container mynav mt-5">
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{form}}
+            <button type="submit" class="btn btn-success">signup</button>
+        </form>
+
+
+
+
+    </div>
+</main>
+{% endblock %}

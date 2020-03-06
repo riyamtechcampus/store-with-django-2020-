@@ -87,28 +87,47 @@
                             <span class="clearfix d-none d-sm-inline-block"> Cart </span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="https://www.facebook.com/mdbootstrap" class="nav-link waves-effect" target="_blank">
-                            <i class="fab fa-facebook-f"></i>
+
+
+
+                    {% if user.us_autenticated %}
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-user-circle mr-2"></i>
+                            Profile
                         </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">My profile</a>
+                            <a class="dropdown-item" href="#">Edit my profile</a>
+                            <a class="dropdown-item" href="#">Change password</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">My orders</a>
+                            <a class="dropdown-item" href="#">Track order</a>
+                        </div>
                     </li>
+
+                    {% else %}
+
                     <li class="nav-item">
-                        <a href="https://twitter.com/MDBootstrap" class="nav-link waves-effect" target="_blank">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://github.com/mdbootstrap/bootstrap-material-design"
-                            class="nav-link border border-light rounded waves-effect" target="_blank">
+                        <a href="{% url 'login' %}" class="nav-link border border-light rounded waves-effect">
                             <i class="fas fa-sign-in-alt mr-2"></i>Login
                         </a>
                     </li>
+
                     <li class="nav-item">
-                        <a href="https://github.com/mdbootstrap/bootstrap-material-design"
-                            class="nav-link border border-light rounded waves-effect" target="_blank">
+                        <a href="{% url 'accounts:signup' %}" class="nav-link border border-light rounded waves-effect"
+                            target="_blank">
                             <i class="fa fa-user-plus mr-2"></i>Signup
                         </a>
                     </li>
+
+                    {% endif %}
+
+
+
                 </ul>
 
             </div>

@@ -10,7 +10,7 @@ def product_list(request):
 
     product_list = Product.objects.all()
 
-    paginator = Paginator(product_list, 2)  # Show 25 contacts per page.
+    paginator = Paginator(product_list, 3)  # Show 25 contacts per page.
     page = request.GET.get('page')
     product_list = paginator.get_page(page)
 
